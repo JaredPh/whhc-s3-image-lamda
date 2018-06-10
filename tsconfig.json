@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "outDir": "./dist",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "lib": [
+            "es2015"
+        ],
+        "types": [
+            "node"
+        ]
+    },
+    "include": [
+      "src/**/*"
+    ]
+}

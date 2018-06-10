@@ -1,0 +1,23 @@
+{
+  "name": "whhc-s3-image-lamdas",
+  "version": "1.0.0",
+  "description": "Lambda functions for S3 image retrival and manipulation",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "author": "Jared Phayer <dev@jared.ph>",
+  "repository": "https://github.com/jaredph/whhc-s3-image-lamdas",
+  "scripts": {
+    "build": "npm run clear:dist && tsc",
+    "build:prod": "npm build && npm ci --production && zip -r lambda.zip dist node_modules && npm ci",
+    "clear:dist": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.65",
+    "aws-sdk": "^2.254.1",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.1"
+  },
+  "dependencies": {
+    "gm": "^1.23.1"
+  }
+}
