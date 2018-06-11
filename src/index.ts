@@ -1,4 +1,4 @@
-import * as im from './image';
+import * as image from './image';
 import { methods as respond } from './response';
 import * as s3 from './s3';
 
@@ -25,7 +25,7 @@ exports.handler = (event, context, callback) => {
         return respond.withError(callback, 'invalid size', 400);
     }
 
-    const mimeType = im.getMimeType(filename);
+    const mimeType = image.getMimeType(filename);
 
     const originalKey = `native/${filename}`;
     const expectedKey = `${size}/${filename}`;
@@ -40,7 +40,7 @@ exports.handler = (event, context, callback) => {
                 .then((original) => {
                     console.log('FOUND ORIGINAL KEY:', expectedKey);
 
-                    im.resizeImage(original.Body, sizes[size])
+                    image.resizeImage(original.Body, sizes[size])
                         .then((resizedFile) => {
                             s3.saveFileToBucket(bucket, expectedKey, resizedFile)
                                 .then(() => {
