@@ -18,6 +18,7 @@
     "typescript": "^2.9.1"
   },
   "dependencies": {
-    "gm": "^1.23.1"
+    "gm": "^1.23.1",
+    "moment": "^2.22.2"
   }
 }
