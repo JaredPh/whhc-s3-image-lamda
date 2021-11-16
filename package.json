@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@types/node": "^7.0.65",
-    "aws-sdk": "^2.254.1",
+    "aws-sdk": "^2.814.0",
     "tslint": "^5.10.0",
     "typescript": "^2.9.1"
   },
